@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Thymeleaf入门</title>
+</head>
+<body>
+    <span th:text="hellothymeleaf"></span>
+    <hr/>
+    <span th:text="${message}"></span>
+    
+    <input type="text" name="name" th:value="${message}"/>
+    
+    <hr/>
+    <span th:text="${#strings.isEmpty(message)}"></span>.
+    <hr/>
+    <span th:text="${#strings.contains(message,'T')}"></span>
+    <sapn th:text="${#strings.contains(message,'一')}"></sapn>
+    
+    <hr/>
+    <span th:text="${#dates.format(key)}"></span>
+    <span th:text="${#dates.format(key,'yyyy/MM/dd')}"></span>
+    <hr/>
+    <span th:text="${#dates.year(key)}"></span>
+    <span th:text="${#dates.month(key)}"></span>
+    <span th:text="${#dates.day(key)}"></span>
+</body>
+</html>
